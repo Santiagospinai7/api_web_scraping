@@ -1,6 +1,12 @@
 from sqlalchemy import Column, Integer, String, Boolean
 # from sqlalchemy.orm import relationship
-from scraper_api.database import Base
+
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+from ..database import Base
 
 class Category(Base):
     __tablename__ = 'categories'
